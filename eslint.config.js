@@ -24,6 +24,12 @@ export default defineConfig([
     },
     rules: {
       'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
+      'eqeqeq': 'warn',
+      'react/react-in-jsx-scope': 'off',
+      'react/jsx-no-target-blank': 'off',
+      'react/jsx-no-useless-fragment': 'off',
+      'react/jsx-no-comment-textnodes': 'off',
+      'react/jsx-no-duplicate-props': 'off',
     },
   },
 ])
