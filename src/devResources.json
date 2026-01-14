@@ -1,0 +1,242 @@
+{
+  "learning": [
+    {
+      "id": "1",
+      "name": "Stack Overflow",
+      "url": "https://stackoverflow.com/",
+      "description": "Stack Overflow is a question and answer site for professional and enthusiast programmers.",
+      "icon": "https://stackoverflow.com/favicon.ico"
+    },
+    {
+      "id": "2",
+      "name": "Tailwind CSS",
+      "url": "https://tailwindcss.com/",
+      "description": "Tailwind CSS is a utility-first CSS framework for rapidly building custom user interfaces.",
+      "icon": "https://tailwindcss.com/favicon.ico"
+    },
+    {
+      "id": "3",
+      "name": "React",
+      "url": "https://react.dev/",
+      "description": "React is a JavaScript library for building user interfaces.",
+      "icon": "https://react.dev/favicon.ico"
+    },
+    {
+      "id": "4",
+      "name": "Vite",
+      "url": "https://vite.dev/",
+      "description": "Vite is a build tool for JavaScript and TypeScript projects.",
+      "icon": "https://vite.dev/favicon.ico"
+    },
+    {
+      "id": "5",
+      "name": "TypeScript",
+      "url": "https://www.typescriptlang.org/",
+      "description": "TypeScript is a superset of JavaScript that compiles to JavaScript.",
+      "icon": "https://www.typescriptlang.org/favicon.ico"
+    },
+    {
+      "id": "6",
+      "name": "JavaScript",
+      "url": "https://www.javascript.com/",
+      "description": "JavaScript is a programming language that allows you to implement complex features on web pages.",
+      "icon": "https://www.javascript.com/favicon.ico"
+    },
+    {
+      "id": "7",
+      "name": "HTML",
+      "url": "https://www.w3schools.com/html/",
+      "description": "HTML is the standard markup language for creating web pages.",
+      "icon": "https://www.w3schools.com/html/favicon.ico"
+    },
+    {
+      "id": "8",
+      "name": "CSS",
+      "url": "https://www.w3schools.com/css/",
+      "description": "CSS is the language we use to style an HTML document.",
+      "icon": "https://www.w3schools.com/css/favicon.ico"
+    },
+    {
+      "id": "9",
+      "name": "Git",
+      "url": "https://git-scm.com/",
+      "description": "Git is a distributed version control system.",
+      "icon": "https://git-scm.com/favicon.ico"
+    },
+    {
+      "id": "10",
+      "name": "GitHub",
+      "url": "https://github.com/",
+      "description": "GitHub is a web-based hosting service for version control using Git.",
+      "icon": "https://github.com/favicon.ico"
+    },
+    {
+      "id": "11",
+      "name": "GitLab",
+      "url": "https://gitlab.com/",
+      "description": "GitLab is a web-based Git-repository manager with wiki and issue tracking features.",
+      "icon": "https://gitlab.com/favicon.ico"
+    },
+    {
+      "id": "12",
+      "name": "Bitbucket",
+      "url": "https://bitbucket.org/",
+      "description": "Bitbucket is a web-based Git repository manager with wiki and issue tracking features.",
+      "icon": "https://bitbucket.org/favicon.ico"
+    },
+    {
+      "id": "13",
+      "name": "Docker",
+      "url": "https://www.docker.com/",
+      "description": "Docker is a platform for developing, shipping, and running applications in containers.",
+      "icon": "https://www.docker.com/favicon.ico"
+    },
+    {
+      "id": "14",
+      "name": "Kubernetes",
+      "url": "https://kubernetes.io/",
+      "description": "Kubernetes is an open-source system for automating deployment, scaling, and management of containerized applications.",
+      "icon": "https://kubernetes.io/favicon.ico"
+    },
+    {
+      "id": "15",
+      "name": "AWS",
+      "url": "https://aws.amazon.com/",
+      "description": "AWS is a cloud computing platform provided by Amazon.",
+      "icon": "https://aws.amazon.com/favicon.ico"
+    },
+    {
+      "id": "16",
+      "name": "Azure",
+      "url": "https://azure.microsoft.com/",
+      "description": "Azure is a cloud computing platform provided by Microsoft.",
+      "icon": "https://azure.microsoft.com/favicon.ico"
+    },
+    {
+      "id": "17",
+      "name": "GCP",
+      "url": "https://cloud.google.com/",
+      "description": "GCP is a cloud computing platform provided by Google.",
+      "icon": "https://cloud.google.com/favicon.ico"
+    },
+    {
+      "id": "18",
+      "name": "Oracle Cloud",
+      "url": "https://www.oracle.com/cloud/",
+      "description": "Oracle Cloud is a cloud computing platform provided by Oracle.",
+      "icon": "https://www.oracle.com/cloud/favicon.ico"
+    },
+    {
+      "id": "19",
+      "name": "IBM Cloud",
+      "url": "https://www.ibm.com/cloud/",
+      "description": "IBM Cloud is a cloud computing platform provided by IBM.",
+      "icon": "https://www.ibm.com/cloud/favicon.ico"
+    },
+    {
+      "id": "20",
+      "name": "Oracle Cloud",
+      "url": "https://www.oracle.com/cloud/",
+      "description": "Oracle Cloud is a cloud computing platform provided by Oracle.",
+      "icon": "https://www.oracle.com/cloud/favicon.ico"
+    }
+  ],
+  "tools": [
+    {
+      "id": "21",
+      "name": "VS Code",
+      "url": "https://code.visualstudio.com/",
+      "description": "VS Code is a code editor developed by Microsoft.",
+      "icon": "https://code.visualstudio.com/favicon.ico"
+    },
+    {
+      "id": "22",
+      "name": "WebStorm",
+      "url": "https://www.jetbrains.com/webstorm/",
+      "description": "WebStorm is a code editor developed by JetBrains.",
+      "icon": "https://www.jetbrains.com/webstorm/favicon.ico"
+    }
+  ],
+  "frameworks": [
+    {
+      "id": "23",
+      "name": "React",
+      "url": "https://react.dev/",
+      "description": "React is a JavaScript library for building user interfaces.",
+      "icon": "https://react.dev/favicon.ico"
+    },
+    {
+      "id": "24",
+      "name": "Vue",
+      "url": "https://vuejs.org/",
+      "description": "Vue is a JavaScript framework for building user interfaces.",
+      "icon": "https://vuejs.org/favicon.ico"
+    }
+  ],
+  "databases": [
+    {
+      "id": "25",
+      "name": "MySQL",
+      "url": "https://www.mysql.com/",
+      "description": "MySQL is a relational database management system.",
+      "icon": "https://www.mysql.com/favicon.ico"
+    },
+    {
+      "id": "26",
+      "name": "PostgreSQL",
+      "url": "https://www.postgresql.org/",
+      "description": "PostgreSQL is a relational database management system.",
+      "icon": "https://www.postgresql.org/favicon.ico"
+    }
+  ],
+  "testing": [
+    {
+      "id": "27",
+      "name": "Jest",
+      "url": "https://jestjs.io/",
+      "description": "Jest is a JavaScript testing framework.",
+      "icon": "https://jestjs.io/favicon.ico"
+    },
+    {
+      "id": "28",
+      "name": "Mocha",
+      "url": "https://mochajs.org/",
+      "description": "Mocha is a JavaScript testing framework.",
+      "icon": "https://mochajs.org/favicon.ico"
+    }
+  ],
+  "other": [
+    {
+      "id": "29",
+      "name": "Slack",
+      "url": "https://slack.com/",
+      "description": "Slack is a team communication platform.",
+      "icon": "https://slack.com/favicon.ico"
+    },
+    {
+      "id": "30",
+      "name": "Discord",
+      "url": "https://discord.com/",
+      "description": "Discord is a team communication platform.",
+      "icon": "https://discord.com/favicon.ico"
+    }
+  ],
+  "videos": [
+    {
+      "id": "31",
+      "name": "YouTube",
+      "url": "https://www.youtube.com/",
+      "description": "YouTube is a video sharing platform.",
+      "icon": "https://www.youtube.com/favicon.ico"
+    }
+  ],
+  "books": [
+    {
+      "id": "32",
+      "name": "The Pragmatic Programmer",
+      "url": "https://www.amazon.com/The-Pragmatic-Programmer-Journeyman-Master/dp/020161622X",
+      "description": "The Pragmatic Programmer is a book about programming.",
+      "icon": "https://www.amazon.com/favicon.ico"
+    }
+  ]
+}
