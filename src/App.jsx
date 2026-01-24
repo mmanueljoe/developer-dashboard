@@ -1,34 +1,39 @@
 import devResources from './devResources.json';
+import { useState, useEffect } from 'react';
 import './App.css';
+import LoadingScreen from './components/LoadingScreen';
+import UserNameForm from './components/UserNameForm';
+import Header from './components/Header';
+
 function App() {
-  console.log(devResources);
+  const [isLoading, setIsLoading] = useState(true);
+  const [username, setUsername] = useState('');
+  const [theme, setTheme] = useState('light');
+  const categories = Object.keys(devResources);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsLoading(false), 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+  }, [theme]);
+
+  if (isLoading) return <LoadingScreen />;
+  if (!username) return <UserNameForm onSubmit={setUsername} />;
+
+  function handleThemeToggle() {
+    setTheme((t) => (t === 'light' ? 'dark' : 'light'));
+  }
+
   return (
-    <div>
-      <header>
-        <h1>Developer Resources</h1>
-
-        <div>
-          <form>
-            <input type="text" placeholder="Search" />
-            <button>Search</button>
-          </form>
-        </div>
-
-        <div>
-          <select>
-            <option value="all">All</option>
-            <option value="learning">Learning</option>
-            <option value="tools">Tools</option>
-            <option value="frameworks">Frameworks</option>
-            <option value="databases">Databases</option>
-            <option value="testing">Testing</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
-      </header>
+    <div className="app">
+      <Header username={username} theme={theme} onThemeToggle={handleThemeToggle} />
 
       <main>
-        {Object.keys(devResources).map((category) => (
+        {categories.map((category) => (
           <div key={category}>
             <h2>{category}</h2>
             <div>

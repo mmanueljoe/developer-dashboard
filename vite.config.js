@@ -8,6 +8,15 @@ export default defineConfig({
   server: {
     port: 3000,
   },
+  resolve: {
+    alias: {
+      '@': '/src',
+      '@assets': '/src/assets',
+      '@components': '/src/components',
+      '@pages': '/src/pages',
+      '@utils': '/src/utils',
+    },
+  },
   build: {
     target: 'esnext',
     base: '/',

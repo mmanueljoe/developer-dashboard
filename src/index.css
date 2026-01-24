@@ -1,1 +1,26 @@
 @import 'tailwindcss';
+
+@layer base {
+}
+
+@layer components {
+  .loading-screen {
+    @apply flex justify-center items-center h-screen bg-gray-200;
+  }
+  .app {
+    @apply min-h-screen flex flex-col;
+  }
+
+  header {
+    @apply p-4 flex justify-between items-center;
+  }
+}
+
+@layer utilities {
+  .dark {
+    @apply bg-gray-900 text-white;
+  }
+  .light {
+    @apply bg-gray-100 text-black;
+  }
+}
