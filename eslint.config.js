@@ -21,6 +21,7 @@ export default defineConfig([
     rules: {
       'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
       eqeqeq: 'warn',
+      'react/prop-types': 'off',
       'react/react-in-jsx-scope': 'off',
       'react/jsx-no-target-blank': 'off',
       'react/jsx-no-useless-fragment': 'off',

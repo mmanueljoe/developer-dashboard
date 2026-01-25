@@ -1,26 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 @import 'tailwindcss';
 
+@theme {
+  /* Base: #7b33cd — use for large text, icons, borders, and as base for variants */
+  --color-primary-500: #7b33cd;
+
+  /* Darker: body text and buttons on light backgrounds (≥4.5:1 on white) */
+  --color-primary-600: #6b2bb8;
+  --color-primary-700: #5a2499;
+
+  /* Lighter: accents and buttons on dark backgrounds; better contrast on black */
+  --color-primary-400: #9b5dd9;
+  --color-primary-300: #b57de8;
+
+  /* Soft backgrounds (hover, subtle highlights) — low chroma to avoid overwhelming text */
+  --color-primary-50: #f5eefc;
+  --color-primary-100: #ebe0f9;
+  --color-primary-950: #2d0f52;
+}
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
 @layer base {
-}
-
-@layer components {
-  .loading-screen {
-    @apply flex justify-center items-center h-screen bg-gray-200;
-  }
-  .app {
-    @apply min-h-screen flex flex-col;
+  :root {
+    --color-surface: #ffffff;
+    --color-surface-alt: #fafafa;
+    --color-body: #0a0a0a;
+    --color-body-muted: #525252;
+    --font-sans: 'Nunito', sans-serif;
   }
 
-  header {
-    @apply p-4 flex justify-between items-center;
+  [data-theme='dark'] {
+    --color-surface: #0a0a0a;
+    --color-surface-alt: #171717;
+    --color-body: #fafafa;
+    --color-body-muted: #a3a3a3;
+    --font-sans: 'Nunito', sans-serif;
   }
-}
 
-@layer utilities {
-  .dark {
-    @apply bg-gray-900 text-white;
+  html {
+    @apply antialiased;
+    font-family: var(--font-sans);
   }
-  .light {
-    @apply bg-gray-100 text-black;
+
+  body {
+    background-color: var(--color-surface);
+    color: var(--color-body);
+    font-family: var(--font-sans);
   }
 }
