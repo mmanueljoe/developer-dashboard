@@ -1,0 +1,17 @@
+# Netlify/Vercel headers configuration
+# Ensures correct MIME types for JavaScript modules
+
+/*.js
+  Content-Type: application/javascript; charset=utf-8
+
+/*.mjs
+  Content-Type: application/javascript; charset=utf-8
+
+/*.jsx
+  Content-Type: application/javascript; charset=utf-8
+
+/*.svg
+  Content-Type: image/svg+xml
+
+/*.json
+  Content-Type: application/json

@@ -23,6 +23,19 @@ export default defineConfig({
     base: '/',
     outDir: 'dist',
     assetsDir: 'assets',
-    sourcemap: 'true',
+    sourcemap: true,
+    rollupOptions: {
+      output: {
+        // Ensure proper file extensions for better MIME type detection
+        entryFileNames: 'assets/[name]-[hash].js',
+        chunkFileNames: 'assets/[name]-[hash].js',
+        assetFileNames: (assetInfo) => {
+          if (assetInfo.name === 'favicon.svg') {
+            return '[name][extname]';
+          }
+          return 'assets/[name]-[hash][extname]';
+        },
+      },
+    },
   },
 });

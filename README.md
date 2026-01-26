@@ -65,11 +65,43 @@ A React + Vite dashboard for curated developer resources, built to practice **de
 - **Sidebar behavior**
   - Consider adding a proper **focus trap** and Escape-to-close behavior for the mobile drawer for stronger accessibility.
 
-- **Error boundaries**
-  - Add an error boundary around the app shell to handle unexpected runtime errors gracefully.
-
 - **Favicon caching / fallbacks**
   - Consider caching favicon URLs (or providing a local fallback icon) for cases where external services are unavailable.
 
 - **Testing**
   - Add basic unit/integration tests (e.g. username validation, logout behavior, theme persistence).
+
+## Deployment
+
+### Production build
+
+```bash
+yarn build
+```
+
+This creates a `dist/` directory with optimized production files.
+
+### Server configuration (MIME types)
+
+If you see **"Expected a JavaScript-or-Wasm module script but the server responded with a MIME type of application/octet-stream"** in production, your server needs to serve `.js` files with the correct MIME type.
+
+**Quick fixes by platform:**
+
+- **Vercel**: `vercel.json` is included (automatically applies headers)
+- **Netlify**: `public/_headers` is included (automatically applies headers)
+- **Apache**: Copy `public/.htaccess` to your `dist/` directory after build
+- **Nginx**: Add to your server config:
+  ```nginx
+  location ~* \.(js|mjs|jsx)$ {
+    add_header Content-Type application/javascript;
+  }
+  ```
+- **Other servers**: Ensure `.js`, `.mjs`, `.jsx` files are served with `Content-Type: application/javascript; charset=utf-8`
+
+### Favicon 404
+
+If the favicon shows a 404:
+
+- Ensure `public/favicon.svg` is copied to `dist/favicon.svg` (Vite does this automatically)
+- Verify your server serves files from the root of `dist/`
+- Check that `index.html` references `/favicon.svg` (not `favicon.svg` or `./favicon.svg`)
