@@ -1,16 +1,75 @@
-# React + Vite
+# Developer Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React + Vite dashboard for curated developer resources, built to practice **design systems**, **responsive UI**, **accessibility**, and **state management**.
 
-Currently, two official plugins are available:
+## Running locally
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Install**: `yarn install` (or `yarn`)
+- **Dev server**: `yarn start` (Vite on port **3000**)
+- **Build**: `yarn build`
+- **Preview build**: `yarn preview`
 
-## React Compiler
+## What’s implemented in this repo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Tailwind CSS v4 setup**
+  - Uses `@tailwindcss/vite` (see `package.json`) and Tailwind’s CSS-first config in `src/index.css`.
+  - Custom brand palette based on `#7b33cd` via `@theme` (see `src/index.css`).
 
-## Expanding the ESLint configuration
+- **Light/Dark theme**
+  - Theme toggling uses a `data-theme` attribute and a Tailwind custom variant:
+    - `@custom-variant dark (&:where([data-theme=\"dark\"], [data-theme=\"dark\"] *));` in `src/index.css`
+  - Theme is managed in React Context and persisted to `localStorage` (see `src/contexts/AppContext.jsx`).
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Responsive layout**
+  - Mobile: sidebar behaves like a drawer (opened from the Header menu button).
+  - Desktop: sidebar is positioned to stay visible while the main content scrolls (see `src/components/Layout.jsx`).
+
+- **Accessible username flow**
+  - Username gate before the dashboard renders.
+  - Validation (required + min length) with inline, accessible error messaging (see `src/components/UserNameForm.jsx`).
+  - Logout button clears username and resets theme (see `src/components/Header.jsx` and `src/contexts/AppContext.jsx`).
+
+- **Resource rendering**
+  - Resources come from JSON (`src/data/devResources.json`).
+  - Cards and category lists render resource items with descriptions and external links.
+
+- **Resource icons (favicons) with fallback**
+  - Uses Google’s favicon service for more reliable logos (see `src/utils/getFavicon.js` and usage in `src/components/ResourcePreview.jsx` + `src/components/CategoryPage.jsx`).
+
+- **Custom favicon**
+  - App favicon is `public/favicon.svg` and is wired in `index.html`.
+
+- **Path aliases**
+  - Aliases like `@components/*`, `@contexts/*`, `@data/*`, `@utils/*` are configured in `vite.config.js` and `jsconfig.json`.
+
+## Docs in this repo
+
+- **Styling + design system guide**: `docs/TAILWIND_STYLING_GUIDE.md`
+- **Refactoring + learning path**: `docs/REFACTORING_LEARNING_GUIDE.md`
+
+## Things learned
+
+- **Tailwind v4 CSS-first configuration** (`@theme`, `@custom-variant`, layering)
+- **Mobile-first responsive layout** with a drawer-style nav
+- **Accessible form validation** (`aria-invalid`, `aria-describedby`, `role=\"alert\"`)
+- **React Context state management** for app-wide state (username + theme)
+- **Persisting preferences** using `localStorage` + syncing `data-theme`
+- **Resilient external icons** by deriving favicons from a domain
+- **Keeping imports maintainable** using Vite/JSConfig path aliases
+
+## Areas to improve next
+
+- **ESLint config issue**
+  - `yarn lint` currently fails with `TypeError: Plugin \"\" not found.` (needs investigation in `eslint.config.js` and dependencies).
+
+- **Sidebar behavior**
+  - Consider adding a proper **focus trap** and Escape-to-close behavior for the mobile drawer for stronger accessibility.
+
+- **Error boundaries**
+  - Add an error boundary around the app shell to handle unexpected runtime errors gracefully.
+
+- **Favicon caching / fallbacks**
+  - Consider caching favicon URLs (or providing a local fallback icon) for cases where external services are unavailable.
+
+- **Testing**
+  - Add basic unit/integration tests (e.g. username validation, logout behavior, theme persistence).

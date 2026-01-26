@@ -2,18 +2,14 @@
 @import 'tailwindcss';
 
 @theme {
-  /* Base: #7b33cd — use for large text, icons, borders, and as base for variants */
   --color-primary-500: #7b33cd;
 
-  /* Darker: body text and buttons on light backgrounds (≥4.5:1 on white) */
   --color-primary-600: #6b2bb8;
   --color-primary-700: #5a2499;
 
-  /* Lighter: accents and buttons on dark backgrounds; better contrast on black */
   --color-primary-400: #9b5dd9;
   --color-primary-300: #b57de8;
 
-  /* Soft backgrounds (hover, subtle highlights) — low chroma to avoid overwhelming text */
   --color-primary-50: #f5eefc;
   --color-primary-100: #ebe0f9;
   --color-primary-950: #2d0f52;

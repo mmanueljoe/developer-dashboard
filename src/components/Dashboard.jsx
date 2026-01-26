@@ -1,9 +1,9 @@
-import ResourcePreview from './ResourcePreview';
+import ResourcePreview from '@components/ResourcePreview';
 
 function Dashboard({ devResources, onViewMore }) {
   const categories = Object.keys(devResources);
   return (
-    <div className="flex flex-col gap-6" role="main">
+    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6" role="main">
       {categories.map((categoryId) => (
         <ResourcePreview
           key={categoryId}

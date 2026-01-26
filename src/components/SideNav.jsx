@@ -1,6 +1,6 @@
 function SideNav({ categories, activeCategory, onSelectCategory }) {
   return (
-    <nav className="p-4" aria-label="Resource categories">
+    <nav className="p-4 overflow-y-auto overflow-x-hidden flex-1 min-h-0" aria-label="Resource categories">
       <ul className="flex flex-col gap-1">
         <li>
           <button

@@ -7,7 +7,12 @@ function LoadingScreen() {
       role="status"
     >
       {/* Big open spinning circle */}
-      <svg className="h-16 w-16 mb-4 animate-spin" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <svg
+        className="h-16 w-16 mb-4 animate-spin text-primary-500"
+        viewBox="0 0 100 100"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      >
         {/* Outer open circle (arc) */}
         <circle
           cx="50"
@@ -18,12 +23,12 @@ function LoadingScreen() {
           strokeWidth="1"
           strokeDasharray="150"
           strokeDashoffset="80"
-          className="text-primary-500"
         />
       </svg>
 
       {/* Loading text */}
-      <span className="text-sm font-medium text-black dark:text-white">Loading...</span>
+      <span className="text-base sm:text-lg font-medium text-black dark:text-white">Loading</span>
+      <span className="sr-only">Loading…</span>
     </div>
   );
 }
